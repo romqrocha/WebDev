@@ -10,28 +10,22 @@
     </head>
 
     <body>
-        <vdiv>
+        <div id="inputDiv" class="vertical">
             <label id=inputLabel for="buttonCount"></label>
 
             <gap></gap>
 
             <span style="min-height: 1.5em;">
-                <input type="number" id="buttonCount" value ="3" min="3" max="7"/>
+                <input type="number" id="buttonCount" value="3" min="3" max="7"/>
                 <button id="startButton"></button>
                 <span id="alertDiv"></span>
             </span>
 
             <gap></gap>
 
-            
-            
-            <gap></gap>
-
             <span id="previewSpan"></span>
+        </div>
 
-            <gap></gap>
-
-            <div id="gameDiv"></div>
-        </vdiv>
+        <div id="gameDiv" class="hidden"></div>
     </body>
 </html>

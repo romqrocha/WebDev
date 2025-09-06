@@ -14,4 +14,12 @@ export class EnMessages {
     static startButtonLabel() {
         return "Go!";
     }
+
+    static youWinMsg() {
+        return "Excellent memory!"
+    }
+
+    static wrongOrderMsg() {
+        return "Wrong order!"
+    }
 }
