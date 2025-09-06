@@ -8,9 +8,15 @@ class DocumentController {
    * Initializes the page
    */
   static init() {
-    // start button
+    // find elements
+    let inputLabel = document.getElementById("inputLabel");
     let startButton = document.getElementById("startButton");
+
+    // user facing text
+    inputLabel.innerText = EnMessages.inputLabel();
     startButton.innerText = EnMessages.startButtonLabel();
+
+    // event listeners
     startButton.onclick = GameController.onStart;
   }
 
