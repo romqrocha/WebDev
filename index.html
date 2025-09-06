@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Memory Game</title>
 
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js"></script>
+        <link rel="stylesheet" href="css/style.css">
+        <script type="module" src="js/script.js"></script>
     </head>
+
     <body>
-        
+        <vdiv>
+            <label for="buttonCount">How many buttons to create?</label>
+
+            <gap></gap>
+
+            <span>
+                <input type="number" id="buttonCount" value ="3" min="3" max="7"/>
+                <button id="startButton"></button>
+            </span>
+
+            <gap></gap>
+
+            <div id="alertDiv"></div>
+            
+            <gap></gap>
+
+            <span id="previewSpan"></span>
+
+            <gap></gap>
+
+            <div id="gameDiv"></div>
+        </vdiv>
     </body>
 </html>
