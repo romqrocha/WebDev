@@ -1,4 +1,4 @@
-import { EnMessages } from "/lang/messages/en/user.js";
+import { EnMessages } from "~/lang/messages/en/user.js";
 
 /**
  * Handles the HTML document
