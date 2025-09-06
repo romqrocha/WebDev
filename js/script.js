@@ -81,16 +81,30 @@ class DocumentController {
  * Handles the game logic
  */
 class GameController {
+  static started = false;
   static colors = ["#e63946", "#f77f00", "#ffd60a", "#2a9d8f", "#1d3557", "#9d4edd", "#ff6b81"]
+
+  /**
+   * @param {number} seconds 
+   * @returns A promise that resolves after the given number of seconds 
+   */
+  static sleep = (seconds) => {
+    return new Promise(resolve => setTimeout(resolve, seconds * 1000));
+  }
 
   /**
    * Called when the start button is pressed
    */
-  static onStart = () => {
-    DocumentController.clearPreviewButtons();
-
+  static onStart = async () => {
+    if (this.started) {
+      DocumentController.createAlert(EnMessages.alreadyStartedMsg());
+      return;
+    }
+    this.started = true;
+    
     let numButtons = DocumentController.getInputValue(this.isInputValid);
     if (!numButtons) {
+      this.stop();
       return;
     }
 
@@ -99,6 +113,17 @@ class GameController {
       let button = new Button(i, colors[i - 1]);
       DocumentController.previewButton(button)
     }
+
+    await this.sleep(numButtons)
+
+    this.stop();
+    return;
+  }
+
+  static stop = () => {
+    DocumentController.clearPreviewButtons();
+
+    this.started = false;
   }
 
   /**

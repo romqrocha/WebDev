@@ -16,7 +16,7 @@ alert {
     border: 1px solid #a10000;
     background-color: #ffd6d6;
     color: #a10000;
-    padding: 8px 16px;
+    padding: 0.1em 0.2em;
     border-radius: 4px;
     font-family: inherit;
 }

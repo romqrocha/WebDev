@@ -7,6 +7,10 @@ export class EnMessages {
         return `Please enter a number between ${min} and ${max}.`;
     }
 
+    static alreadyStartedMsg() {
+        return "The game already started!";
+    }
+
     static startButtonLabel() {
         return "Go!";
     }
