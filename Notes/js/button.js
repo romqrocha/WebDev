@@ -6,7 +6,8 @@ export class Button {
      * @param {string} id 
      * @param {string} text 
      * @param {() => undefined} onClick
-     * @param {Array<string>} extraClasses 
+     * @param {Array<string>} extraClasses
+     * @return {Button}
      */
     constructor(id, text, onClick=()=>{}, extraClasses=[]) {
         this.id = id;

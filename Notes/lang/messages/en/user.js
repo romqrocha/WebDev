@@ -11,8 +11,6 @@ export const msgs = {
   writer: {
     title: "Write Notes",
     storedMsg: "Last stored at: ",
-    addButton: "Add",
-    removeButton: "Remove",
     backButton: "Back",
   },
   reader: {
