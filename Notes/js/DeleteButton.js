@@ -4,7 +4,7 @@ export class DeleteButton extends Button {
     /**
      * 
      * @param {string} id 
-     * @param {() => any} onClick 
+     * @param {() => void} onClick 
      * @param {string} extraClasses 
      */
     constructor(id, onClick, extraClasses=[]) {

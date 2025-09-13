@@ -5,20 +5,16 @@ export class DeletableNote {
 
     /**
      * @param {string} id 
-     * @param {string} text 
+     * @param {string} text
+     * @param {(NoteData) => void} saveCallback
+     * @param {(string) => void} removeCallback 
      */
-    constructor(id, text) {
-        let removeFunction = () => {
-            document.getElementById(this.id).remove();
-        }
-
+    constructor(id, text, saveCallback, removeCallback) {
         this.id = id;
-        this.note = new Note(`${id}Note`, text)
-        this.deleteButton = new DeleteButton(`${id}Del`, removeFunction)
+        this.note = new Note(`Note${id}`, text, saveCallback)
+        this.deleteButton = new DeleteButton(`DeleteButton${id}`, () => removeCallback(id))
         this.classes = "container d-flex flex-row justify-content-center align-items-center my-1"
     }
-
-    
 
     /**
      * @returns {HTMLElement}
