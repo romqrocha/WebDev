@@ -1,5 +1,5 @@
 export class Button {
-    static baseClasses = "btn btn-lg btn-primary btn-outline-dark border-0";
+    static baseClasses = "btn btn-lg btn-secondary btn-outline-dark text-light border-0";
 
     /**
      * Creates a button
