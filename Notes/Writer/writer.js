@@ -6,6 +6,7 @@ import { Utils } from "../js/global.js"
 class Writer {
     static lastSaveTime = Date.now(); // TODO
     static addButton = new Button("addButton", "＋", Writer.createNewNote, "fs-2 fw-bold d-flex mt-3 pt-1 btn-success");
+    static backButton = document.getElementById("back");
     static notesDiv = document.getElementById("notesDiv");
     static lastSaveSpan = document.getElementById("headerSpan");
     static savedNotesKey = "savedNotes";
@@ -20,6 +21,8 @@ class Writer {
         Writer.lastSaveSpan.appendChild(lastSaveText);
 
         Writer.createOldNotes();
+        
+        Writer.backButton.textContent = msgs.writer.backButton;
     }
 
     /**

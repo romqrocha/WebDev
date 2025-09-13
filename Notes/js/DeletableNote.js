@@ -1,5 +1,5 @@
 import { DeleteButton } from "./DeleteButton.js"
-import { Note } from "./Note.js"
+import { Note } from "./note.js"
 
 export class DeletableNote {
 
@@ -13,7 +13,7 @@ export class DeletableNote {
         this.id = id;
         this.note = new Note(`Note${id}`, text, saveCallback)
         this.deleteButton = new DeleteButton(`DeleteButton${id}`, () => removeCallback(id))
-        this.classes = "container d-flex flex-row justify-content-center align-items-center my-1"
+        this.classes = "container d-flex flex-row justify-content-center align-items-center"
     }
 
     /**

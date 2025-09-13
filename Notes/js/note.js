@@ -19,7 +19,7 @@ export class Note {
      */
     constructor(id, text, saveCallback=(_)=>{}) {
         this.data = new NoteData(id, text);
-        this.allClasses = "bg-danger border border-dark rounded-3 border-2 px-4 py-2 mx-4 fs-4 text-light w-50";
+        this.allClasses = "bg-danger border border-dark rounded-3 border-2 px-4 py-2 mx-4 my-1 fs-4 text-light w-50";
         this.saveCallback = saveCallback;
     }
 

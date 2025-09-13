@@ -17,6 +17,7 @@ export const msgs = {
   reader: {
     title: "Read Notes",
     updatedMsg: "Last updated at: ",
+    notUpdatedMsg: "Never updated!",
     emptyStorage: "You haven't taken any notes yet...",
     backButton: "Back",
   },
