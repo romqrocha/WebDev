@@ -1,9 +1,5 @@
-.arial {
+.arial, a {
     font-family:Arial;
-}
-
-main {
-    margin: 2rem auto;
 }
 
 h2 {
@@ -22,6 +18,14 @@ button {
     font-size:1rem;
 }
 
+header {
+    display:flex;
+    flex-direction:row;
+    gap:1rem;
+    padding:.5rem 0rem;
+    
+}
+
 .flex {
     display:flex;
     align-items:center;
@@ -33,7 +37,7 @@ button {
 .stack {
     display:flex;
     flex-direction:column;
-    justify-items: center;
-    max-width: 30rem;
-    padding: 1rem 0rem;
+    justify-items:center;
+    max-width:30rem;
+    padding:1rem 0rem;
 }

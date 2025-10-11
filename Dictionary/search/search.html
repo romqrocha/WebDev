@@ -9,7 +9,11 @@
         <link href="./../style.css" rel="stylesheet"/>
     </head>
 
-    <body> 
+    <body>
+        <header>
+            <a href="./../store/" id="storeLink"></a>
+            <a href="./../search/" id="searchLink"></a>
+        </header>
         <main> 
             <h2 id="header" class="arial"></h2>
             <form id="wordForm">
@@ -20,7 +24,7 @@
                         type="text"
                         pattern="[A-Za-z]+"
                         inputmode="text"
-                        placeholder="Something"
+                        placeholder="word"
                         required
                     />
                     <button id="submitButton" type="submit"></button>
