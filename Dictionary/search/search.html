@@ -10,14 +10,10 @@
     </head>
 
     <body> 
-        <main style="margin: 2rem auto;"> 
-            <h2 class="arial">
-                Dictionary
-            </h2>
+        <main> 
+            <h2 id="header" class="arial"></h2>
             <form id="wordForm">
-                <label for="wordInput" class="arial">
-                    Look up a word:
-                </label>
+                <label id="label" for="wordInput" class="arial"></label>
                 <div class="flex">
                     <input
                         id="wordInput"
@@ -27,11 +23,8 @@
                         placeholder="Something"
                         required
                     />
-                    <button type="submit">
-                        Search
-                    </button>
+                    <button id="submitButton" type="submit"></button>
                 </div>
-
             </form>
         </main>
         <div id="result" style="margin-top:1rem;">
