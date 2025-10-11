@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Store</title>
+
+        <script type="module" src="./store.js"></script>
+        <link href="./../style.css" rel="stylesheet"/>
+    </head>
+
+    <body> 
+        <main style="margin: 2rem auto;"> 
+            <h2 class="arial">
+                Dictionary
+            </h2>
+            <form id="wordForm">
+                <label for="wordInput" class="arial">
+                    Create a new definition:
+                </label>
+                <div class="stack">
+                    <input
+                        id="wordInput"
+                        type="text"
+                        pattern="[A-Za-z]+"
+                        inputmode="text"
+                        placeholder="scrongle"
+                        autocomplete="off"
+                        required
+                    />
+                    <textarea
+                        id="definitionInput"
+                        rows="3"
+                        placeholder="your crazy new definition"
+                        autocomplete="off"
+                        required
+                    ></textarea>
+                    <button type="submit">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+        </main>
+        <div id="result" style="margin-top:1rem;">
+            
+        </div>
+    </body>
+</html>

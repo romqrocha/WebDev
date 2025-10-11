@@ -1,0 +1,35 @@
+.arial {
+    font-family:Arial;
+}
+
+h2 {
+    margin-bottom:.5rem;
+}
+
+input, textarea {
+    font-family:Arial;
+    flex:1;
+    padding:.5rem;
+    font-size:1rem;
+}
+
+button {
+    padding:.5rem 1rem; 
+    font-size:1rem;
+}
+
+.flex {
+    display:flex;
+    align-items:center;
+    gap:.5rem;
+    margin-top:.5rem;
+    max-width:20rem;
+}
+
+.stack {
+    display:flex;
+    flex-direction:column;
+    justify-items: center;
+    max-width: 30rem;
+    padding: 1rem 0rem;
+}
