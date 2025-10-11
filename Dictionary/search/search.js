@@ -1,4 +1,5 @@
 import { en } from "../lang/en.js"
+import { sendGetRequest } from "../global.js";
 
 const header = document.getElementById("header");
 const label = document.getElementById("label");
