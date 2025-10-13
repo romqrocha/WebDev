@@ -1,4 +1,4 @@
-.arial, a {
+.arial, a, .error {
     font-family:Arial;
 }
 
@@ -40,4 +40,9 @@ header {
     justify-items:center;
     max-width:30rem;
     padding:1rem 0rem;
+}
+
+.error {
+    color:#aa3333;
+    font-weight: bold;
 }
