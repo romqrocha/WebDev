@@ -1,3 +1,3 @@
 export const config = {
-    DICTIONARY_API_ENDPOINT: "https://localhost:5500",
+    DICTIONARY_API_ENDPOINT: "https://jlau-comp4537-dictionary-server-788293811925.us-west1.run.app/api/definitions",
 }
