@@ -46,6 +46,7 @@ function onSubmit() {
  */
 function onRequestSuccess(request, event) {
     console.log("Request loaded")
+    console.log(`${request.status} ${request.responseText}`)
 
     let obj; 
     try {
