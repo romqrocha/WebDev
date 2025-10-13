@@ -120,12 +120,17 @@ function onNetworkError(request, event) {
  */
 function showResponse(numEntries, term, definition) {
     let result = `
-        <p class='arial'>
-            <h4>Entry #${numEntries} recorded:</h4>
-            <b>Term: </b><span>${term}</span>
-            <br/>
-            <b>Definition: </b><span>${definition}</span>
-        </p>
+        <div>
+            <h3 class='arial'>
+                Entry #${numEntries} recorded:
+            </h3>
+            <p class='arial'>
+                <b>Term: </b><span>${term}</span>
+            </p>
+            <p class='arial'>
+                <b>Definition: </b><span>${definition}</span>
+            </p>
+        </div>
     `
     renderResult(result);
 }
