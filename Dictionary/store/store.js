@@ -24,15 +24,21 @@ function onSubmit() {
     let word = wordInput.value;
     let def = definitionInput.value;
 
-    if (word === "" || def === "") {
-        return;
-    }
-
     // regex for no numbers
     if (!/^\D*$/.test(word)) {
         let result = `
             <p class="error">
                 No numbers allowed for dictionary entries
+            </p>
+        `
+        renderResult(result);
+        return;
+    }
+
+    if (word === "" || def === "") {
+        let result = `
+            <p class="error">
+                Neither field should be empty.
             </p>
         `
         renderResult(result);
