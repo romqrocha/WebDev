@@ -13,7 +13,7 @@ export function sendGetRequest(urlParams, loadedCallback, networkErrorCallback) 
         stringifiedUrlParams.push(`${key}=${encodeURIComponent(value)}`);
     }
 
-    const url = `${config.DICTIONARY_API_ENDPOINT}/?${stringifiedUrlParams.join('&')}`;
+    const url = `${config.DICTIONARY_API_ENDPOINT}?${stringifiedUrlParams.join('&')}`;
 
     request.open("GET", url, true);
     request.onreadystatechange = function(event) {
@@ -38,7 +38,7 @@ export function sendPostRequest(bodyParams, loadedCallback, errorCallback) {
         stringifiedBodyParams.push(`${key}=${encodeURIComponent(value)}`);
     }
 
-    const url = `${config.DICTIONARY_API_ENDPOINT}/`;
+    const url = `${config.DICTIONARY_API_ENDPOINT}`;
 
     request.open("POST", url, true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
