@@ -110,11 +110,14 @@ function onNetworkError(request, event) {
  */
 function showDefinition(term, definition) {
     let result = `
-        <p class='arial'>
-            <b>Term: </b><span>${term}</span>
-            <br/>
-            <b>Definition: </b><span>${definition}</span>
-        </p>
+        <div>
+            <p class='arial'>
+                <b>Term: </b><span>${term}</span>
+            </p>
+            <p class='arial'>
+                <b>Definition: </b><span>${definition}</span>
+            </p>
+        </div>
     `
     renderResult(result);
 }
