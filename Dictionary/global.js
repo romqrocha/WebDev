@@ -28,9 +28,9 @@ export function sendGetRequest(urlParams, loadedCallback, networkErrorCallback) 
 /**
  * @param {Object} bodyParams 
  * @param {(this: XMLHttpRequest, ev: ProgressEvent<EventTarget>) => any} loadedCallback
- * @param {(this: XMLHttpRequest, ev: ProgressEvent<EventTarget>) => any} errorCallback
+ * @param {(this: XMLHttpRequest, ev: ProgressEvent<EventTarget>) => any} networkErrorCallback
  */
-export function sendPostRequest(bodyParams, loadedCallback, errorCallback) {
+export function sendPostRequest(bodyParams, loadedCallback, networkErrorCallback) {
     const request = new XMLHttpRequest();
     
     let stringifiedBodyParams = [];
@@ -42,7 +42,9 @@ export function sendPostRequest(bodyParams, loadedCallback, errorCallback) {
 
     request.open("POST", url, true);
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-    request.onload = loadedCallback;
-    request.onerror = errorCallback;
+    request.onload = function(event) {
+        loadedCallback(this, event);
+    };
+    request.onerror = networkErrorCallback;
     request.send(stringifiedBodyParams.join('&'));
 }

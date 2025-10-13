@@ -45,8 +45,7 @@ function onSubmit() {
  * @param {ProgressEvent<EventTarget>} event 
  */
 function onRequestSuccess(request, event) {
-    console.log("Request loaded")
-    console.log(`${request.status} ${request.responseText}`)
+    console.log(`Request: ${request.status} ${request.responseText}`)
 
     let obj; 
     try {
